@@ -1,0 +1,17 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ [[lilactown/helix "0.1.8"]
+  [clj-commons/cljss "1.6.4"]
+  [funcool/promesa "8.0.450"]]
+
+ :dev-http {8181 "public"}
+ :nrepl    {:port 9191}
+ :builds
+ {:frontend
+  {:target  :browser
+   :modules {:main {:init-fn nomadcoders.frontend.app/init}}}}}
